@@ -40,7 +40,7 @@ Binary classification of 6000 system traces traces
 == Solution
 The training data was split into 80/20 ratio. With 20% of data used for testing.
 
-*Logistic Regression Classifier* was initally used and produced results of decent accuracy (*\~90%*). Further action was taken to optimise a hyperparameter _C_, which resulted in the boost of *\~3%*. *Decision Tree Classifier* was then used as it does not require scaling and normalisation of data and produced a model with *\~96%* accuracy. *Support Vector Machine* was also tried but did not yield accurate model even with tuning. *Random Forest Classifier* was also tied since it operates well on continious data which is present in the dataset. The model yielded *\~98%* accuracy. 
+*Logistic Regression Classifier* was initally used and produced results of decent accuracy (*\~90%*). Further action was taken to optimise a hyperparameter _C_, which resulted in the boost of *\~3%*. *Decision Tree Classifier* was then used as it does not require scaling and normalisation of data and produced a model with *\~96%* accuracy. *Support Vector Machine* was also tried but did not yield accurate model even with tuning. *Random Forest Classifier* was also tried since it operates well on continious data which is present in the dataset. The model yielded *\~98%* accuracy. 
 
 Finally, during the part B classification, the *XGBoost* showed remarkable performance over the Random Forest Classifier when performing multiclass classification. Therefore, it was also tested in the part A with binary classification and showed a significant improvement in accuracy up to *\~99%*.
 
@@ -77,15 +77,15 @@ The *XGBoost* was discovered due to its incorporated regularization while workin
 #pagebreak()
 = Code
 
-The code can be acccess in Google Collab at \ #underline[https://colab.research.google.com/drive/19A6xIVhpaDiVfeExI3M0p__8oQl3rU7D?usp=sharin]
+The code can be acccess in Google Collab at \ #underline[https://colab.research.google.com/drive/19A6xIVhpaDiVfeExI3M0p__8oQl3rU7D?usp=sharing]
 
 == Usage
 
 - Navigate to the link
 - Executed code blocks as instructed at the beginning of the section A and the Section B
-- (Optional) Executed other block to see the accuracy results for other models.
+- (Optional) Executed other blocks to see the accuracy results for other models.
 
 == Local settings
 - The notebook has been configured to use the local running image for better performance, therefore, it is important to change remote instance if you do not have the local execution environment running.
 - If you run hyperparameter fitting for verifying the results, adjust `n_jobs` according to your environment computational capabilities.
-- Finally, adjust the paths to the datasets' CSVs depending on your configuration of the environment.
+- Finally, adjust the paths to the datasets' CSVs in the preludes depending on your configuration of the environment.
