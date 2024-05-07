@@ -38,7 +38,8 @@
 Binary classification of 6000 system traces traces
 
 == Solution
-The training data was split into 80/20 ratio. With 20% of data used for testing.
+The training data was split into 80/20 ratio. With 20% of data used for testing. 
+After the model was selected, it is trained with 100% of the training data to further improve the accuracy.
 
 *Logistic Regression Classifier* was initally used and produced results of decent accuracy (*\~90%*). Further action was taken to optimise a hyperparameter _C_, which resulted in the boost of *\~3%*. *Decision Tree Classifier* was then used as it does not require scaling and normalisation of data and produced a model with *\~96%* accuracy. *Support Vector Machine* was also tried but did not yield accurate model even with tuning. *Random Forest Classifier* was also tried since it operates well on continious data which is present in the dataset. The model yielded *\~98%* accuracy. 
 
@@ -61,7 +62,7 @@ Multiclass classification of 6000 system traces traces
 
 == Solution
 
-Similarly, as in part A, the data was split into 80/20 ration for training and testing purposes.
+Similarly, as in part A, the data was split into 80/20 ration for training and testing purposes, and 100% of data for final training.
 
 *Random Forest Classifier* was again tested and produced a consistent good accuracy of *\~95%*. *Logic Regression Classifier* performed even worse than in the part A even with hyperparameter tuning with the accuracy of *\~67%*, and significant downgrade in runtime speed. 
 The *XGBoost* was discovered due to its incorporated regularization while working with this dataset and better runtime performance. The raw model perfomed faster and slightly more accurately with the score of *\~96%* than the Random Tree Forest. Further tuning took place using `RandomizedSearchCV` to find optimum values for `colsample_bytree`, `gamma`, `learning_rate`, `max_depth`, `n_estimators`, `subsample` as well as running on scaled features. The calculated hyperparameters was then used in the refined model and gave further improvement in accuracy up to *\~97%*.
