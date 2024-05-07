@@ -77,15 +77,17 @@ The *XGBoost* was discovered due to its incorporated regularization while workin
 #pagebreak()
 = Code
 
-The code can be acccess in Google Collab at \ #underline[https://colab.research.google.com/drive/19A6xIVhpaDiVfeExI3M0p__8oQl3rU7D?usp=sharing]
+The code can be acccess in Google Collab and is published on GitHub: #underline[https://github.com/SkymanOne/COMP3217_CW2].
 
 == Usage
 
-- Navigate to the link
+- Navigate to `COMP3217_CW_2.ipynb` to view the model submissions.
 - Execute code blocks as instructed at the beginning of the section A and the Section B
-- (Optional) Execute other blocks to see the accuracy results for other models.
+- Navigate to `COMP3217_CW_2_Experiments.ipynb` to view other models.
+
 
 == Local settings
+- Update paths for `train_data` and `test_data` CSV files in parts A and B.
 - The notebook has been configured to use the local running image for better performance, therefore, it is important to change remote instance if you do not have the local execution environment running.
 - If you run hyperparameter fitting for verifying the results, adjust `n_jobs` according to your environment computational capabilities.
-- Finally, adjust the paths to the datasets' CSVs in the preludes depending on your configuration of the environment.
+- Finally, adjust the paths to the datasets' CSVs in the prelude blocks depending on your configuration of the environment.
