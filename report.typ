@@ -82,8 +82,8 @@ The code can be acccess in Google Collab at \ #underline[https://colab.research.
 == Usage
 
 - Navigate to the link
-- Executed code blocks as instructed at the beginning of the section A and the Section B
-- (Optional) Executed other blocks to see the accuracy results for other models.
+- Execute code blocks as instructed at the beginning of the section A and the Section B
+- (Optional) Execute other blocks to see the accuracy results for other models.
 
 == Local settings
 - The notebook has been configured to use the local running image for better performance, therefore, it is important to change remote instance if you do not have the local execution environment running.
